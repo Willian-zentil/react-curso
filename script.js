@@ -52,3 +52,21 @@ const hh2 = document.querySelector('.animais h2')
 
 const lastP = document.querySelectorAll('p')
 lastP(lastP.length - 1)
+
+//transversing
+// Duplique o menu e adicione ele em copy
+const menu = document.querySelector(".menu")
+const cloneMenu = menu.cloneNode(true)
+
+document.querySelector(".copy").appendChild(cloneMenu)
+
+// Selecione o primeiro DT da dl de Faq
+document.querySelector(".faq").querySelector("DT").querySelector("dl") //ou
+
+// Selecione o DD referente ao primeiro DT
+const primeiroDt = faq.querySelector("DT")
+const proximoDD = primeiroDt.nexrElementSibling;
+
+// Substitua o conteúdo html de .faq pelo de .animais
+const animaisTxt = document.querySelector(".animais").innerHTML
+faq.innerHTML = animaisTxt
